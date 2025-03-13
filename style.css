@@ -1,34 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Montserrat, sans-serif;
+    margin: auto;
+    max-width: 1200px;
+    background-color: #fafafa;
+}
+
+.header {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #f4f4f4;
+    justify-content: start;
+    align-items: flex-start;
+    flex-flow: column;
 }
 
-.container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-input, button {
-    margin: 5px;
+#taskInput {
     padding: 10px;
+    margin: 0 10px 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    background: #ddd;
-    margin: 5px 0;
+#addTaskBtn {
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
+    margin: 0 10px 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
     cursor: pointer;
+}
+
+#addTaskBtn:hover {
+    transform: scale(1.05);
+    transition: 300ms;
+}
+
+.board {
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.column {
+    flex: 1;
+    min-height: 200px;
+    padding: 10px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.task {
+    background: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: grab;
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 15px;
+    border: 1px solid #ddd;
+}
+
+.delete-btn {
+    background: #fc979a;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    transform: scale(0.95);
+    transition: 300ms;
 }
